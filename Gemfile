@@ -12,4 +12,5 @@ gem "sinatra"
 
 group :development do
   gem "foreman", require: false
+  gem "onkcop", require: false
 end
