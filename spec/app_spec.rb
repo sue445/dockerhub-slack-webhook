@@ -1,5 +1,5 @@
 describe App do
-  describe "/" do
+  describe "GET /" do
     subject { get "/" }
 
     it { should be_ok }
