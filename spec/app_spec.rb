@@ -6,7 +6,7 @@ describe App do
   end
 
   describe "POST /webhook" do
-    subject { post "/webhook", JSON.parse(payload) }
+    subject { post "/webhook", payload, { "CONTENT_TYPE" => "application/json" } }
 
     before do
       ENV["SLACK_WEBHOOK_URL"] = webhooK_url
