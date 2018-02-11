@@ -19,6 +19,9 @@ group :development do
 end
 
 group :test do
+  gem "codeclimate-test-reporter", "~> 1.0.0", require: false
+  gem "coveralls", require: false
   gem "rack-test"
   gem "rspec"
+  gem "simplecov", require: false
 end
