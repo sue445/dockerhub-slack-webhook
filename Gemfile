@@ -10,6 +10,7 @@ gem "puma"
 gem "puma-heroku"
 gem "rollbar"
 gem "sinatra"
+gem "slack-notifier"
 
 group :development do
   gem "foreman", require: false
