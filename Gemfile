@@ -14,3 +14,8 @@ group :development do
   gem "foreman", require: false
   gem "onkcop", require: false
 end
+
+group :test do
+  gem "rack-test"
+  gem "rspec"
+end
