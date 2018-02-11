@@ -11,10 +11,11 @@ class App < Sinatra::Base
   end
 
   post "/webhook" do
+    params = JSON.parse(request.body.read)
     message = <<~MSG
-      Build finished by @#{params[:push_data][:pusher]} :beer:
-      #{params[:repository][:repo_name]}:#{params[:push_data][:tag]}
-      #{params[:repository][:repo_url]}
+      Build finished by @#{params["push_data"]["pusher"]} :beer:
+      #{params["repository"]["repo_name"]}:#{params["push_data"]["tag"]}
+      #{params["repository"]["repo_url"]}
     MSG
 
     App.post_slack(
