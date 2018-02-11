@@ -1,0 +1,40 @@
+{
+  "name": "dockerhub-slack-webhook",
+  "description": "Docker Hub webhook for slack notification after build",
+  "keywords": ["Docker Hub", "webhook", "Slack"],
+  "website": "https://github.com/sue445/dockerhub-slack-webhook",
+  "repository": "https://github.com/sue445/dockerhub-slack-webhook",
+  "env": {
+    "BUNDLE_WITHOUT": {
+      "description": "bundle install --without <these>",
+      "value": "test:development"
+    },
+    "SLACK_WEBHOOK_URL": {
+      "description": "Incoming Webhook URL"
+    },
+    "SLACK_CHANNEL": {
+      "description": "Notify to channel (e.g. #random )",
+      "value": "#random",
+      "required": false
+    },
+    "SLACK_USERNAME": {
+      "description": "Username of the notification message",
+      "value": "Docker Hub Build",
+      "required": false
+    },
+    "MAX_THREADS": {
+      "description": "puma threads count",
+      "value": "5",
+      "required": false
+    },
+    "WEB_CONCURRENCY": {
+      "description": "puma workers count",
+      "value": "1",
+      "required": false
+    }
+  },
+  "addons": [
+    "papertrail",
+    "rollbar"
+  ]
+}
