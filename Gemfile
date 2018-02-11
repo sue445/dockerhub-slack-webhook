@@ -8,11 +8,13 @@ ruby "2.5.0"
 
 gem "puma"
 gem "puma-heroku"
+gem "rollbar"
 gem "sinatra"
 
 group :development do
   gem "foreman", require: false
   gem "onkcop", require: false
+  gem "rake", require: false
 end
 
 group :test do

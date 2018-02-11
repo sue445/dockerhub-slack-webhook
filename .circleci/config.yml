@@ -1,0 +1,101 @@
+version: 2.0
+
+default: &default
+  docker:
+    - image: circleci/ruby:2.5.0-node-browsers
+      environment:
+        RACK_ENV: test
+        # CODECLIMATE_REPO_TOKEN:
+    - image: memcached:1.5-alpine
+  working_directory: ~/app
+
+restore_repo_cache_option: &restore_repo_cache_option
+  key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+
+restore_bundle_cache_option: &restore_bundle_cache_option
+  keys:
+    - v1-bundle-{{ checksum "Gemfile.lock" }}
+    - v1-bundle
+
+jobs:
+  checkout_code:
+    <<: *default
+
+    steps:
+      - checkout
+      - save_cache:
+          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          paths:
+            - ~/app
+
+  bundle_dependencies:
+    <<: *default
+
+    steps:
+      - restore_cache:
+          <<: *restore_repo_cache_option
+      - restore_cache:
+          <<: *restore_bundle_cache_option
+      - run: .circleci/setup_bundle.sh
+      - save_cache:
+          key: v1-bundle-{{ checksum "Gemfile.lock" }}
+          paths:
+            - ~/app/vendor/bundle
+
+  rspec:
+    <<: *default
+
+    steps:
+      - restore_cache:
+          <<: *restore_repo_cache_option
+      - restore_cache:
+          <<: *restore_bundle_cache_option
+      - run: .circleci/setup_bundle.sh
+      - run: bundle exec rspec
+      # - run: bundle exec codeclimate-test-reporter
+
+  rubocop:
+    <<: *default
+
+    steps:
+      - restore_cache:
+          <<: *restore_repo_cache_option
+      - restore_cache:
+          <<: *restore_bundle_cache_option
+      - run: .circleci/setup_bundle.sh
+      - run: bundle exec rubocop
+
+  deploy:
+    <<: *default
+
+    steps:
+      - restore_cache:
+          <<: *restore_repo_cache_option
+      - run: .circleci/heroku_setup.sh
+      - add_ssh_keys:
+          fingerprints:
+            - ""
+      - run: .circleci/heroku_deploy.sh
+
+workflows:
+  version: 2
+
+  build-and-deploy:
+    jobs:
+      - checkout_code
+      - bundle_dependencies:
+          requires:
+            - checkout_code
+      - rspec:
+          requires:
+            - bundle_dependencies
+      - rubocop:
+          requires:
+            - bundle_dependencies
+      - deploy:
+          requires:
+            - rspec
+            - rubocop
+          filters:
+            branches:
+              only: master
