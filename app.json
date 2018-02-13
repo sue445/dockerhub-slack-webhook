@@ -22,6 +22,11 @@
       "value": "Docker Hub Build",
       "required": false
     },
+    "DEBUG_LOGGING": {
+      "description": "Whether to output debug log (true or false)",
+      "value": "false",
+      "required": false
+    },
     "MAX_THREADS": {
       "description": "puma threads count",
       "value": "5",
