@@ -28,10 +28,10 @@ GEM
     puma (3.11.4)
     puma-heroku (1.0.0)
       puma (~> 3.0)
-    rack (2.0.4)
+    rack (2.0.5)
     rack-protection (2.0.1)
       rack
-    rack-test (0.8.3)
+    rack-test (1.0.0)
       rack (>= 1.0, < 3)
     rainbow (3.0.0)
     rake (12.3.1)
