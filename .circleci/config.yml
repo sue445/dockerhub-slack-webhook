@@ -2,7 +2,7 @@ version: 2.0
 
 default: &default
   docker:
-    - image: circleci/ruby:2.5.1-node-browsers
+    - image: circleci/ruby:2.5.1
       environment:
         RACK_ENV: test
         CODECLIMATE_REPO_TOKEN: 534299c4cde318f50f1716004b9f46b0ceaf132a68e9bfead3c88faa3981afd4
