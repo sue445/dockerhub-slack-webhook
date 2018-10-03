@@ -24,7 +24,7 @@ class App < Sinatra::Base
   post "/webhook" do
     payload = JSON.parse(request.body.read)
 
-    logger.debug { "payload=#{payload}" }
+    logger.debug { "payload=#{payload}, params=#{params}" }
 
     message = <<~MSG
       Build finished by @#{payload["push_data"]["pusher"]} :beer:
@@ -34,9 +34,16 @@ class App < Sinatra::Base
 
     logger.debug { "message=#{message}" }
 
+    channel =
+      if params[:channel].blank?
+        ENV["SLACK_CHANNEL"]
+      else
+        "#" + params[:channel]
+      end
+
     App.post_slack(
       webhook_url: ENV["SLACK_WEBHOOK_URL"],
-      channel:     ENV["SLACK_CHANNEL"],
+      channel:     channel,
       username:    ENV["SLACK_USERNAME"],
       message:     message,
     )

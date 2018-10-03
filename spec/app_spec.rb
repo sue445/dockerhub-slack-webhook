@@ -71,5 +71,31 @@ describe App do
           with(webhook_url: webhooK_url, channel: env_channel, username: username, message: message)
       end
     end
+
+    context "with empty channel in params" do
+      subject { post "/webhook?channel=", payload, { "CONTENT_TYPE" => "application/json" } }
+
+      it { should be_ok }
+
+      it "called post_slack" do
+        subject
+
+        expect(App).to have_received(:post_slack).
+          with(webhook_url: webhooK_url, channel: env_channel, username: username, message: message)
+      end
+    end
+
+    context "with channel in params" do
+      subject { post "/webhook?channel=random", payload, { "CONTENT_TYPE" => "application/json" } }
+
+      it { should be_ok }
+
+      it "called post_slack" do
+        subject
+
+        expect(App).to have_received(:post_slack).
+          with(webhook_url: webhooK_url, channel: "#random", username: username, message: message)
+      end
+    end
   end
 end
