@@ -6,18 +6,16 @@ describe App do
   end
 
   describe "POST /webhook" do
-    subject { post "/webhook", payload, { "CONTENT_TYPE" => "application/json" } }
-
     before do
       ENV["SLACK_WEBHOOK_URL"] = webhooK_url
-      ENV["SLACK_CHANNEL"]     = channel
+      ENV["SLACK_CHANNEL"]     = env_channel
       ENV["SLACK_USERNAME"]    = username
 
       allow(App).to receive(:post_slack)
     end
 
     let(:webhooK_url) { "https://hooks.slack.com/services/XXXXXXXX/XXXXXXXX/XXXXXXXX" }
-    let(:channel)     { "#general" }
+    let(:env_channel) { "#general" }
     let(:username)    { "Docker Hub Build" }
     let(:message) do
       <<~MSG
@@ -61,13 +59,43 @@ describe App do
       JSON
     end
 
-    it { should be_ok }
+    context "without channel in params" do
+      subject { post "/webhook", payload, { "CONTENT_TYPE" => "application/json" } }
 
-    it "called post_slack" do
-      subject
+      it { should be_ok }
 
-      expect(App).to have_received(:post_slack).
-                       with(webhook_url: webhooK_url, channel: channel, username: username, message: message)
+      it "called post_slack" do
+        subject
+
+        expect(App).to have_received(:post_slack).
+                         with(webhook_url: webhooK_url, channel: env_channel, username: username, message: message)
+      end
+    end
+
+    context "with empty channel in params" do
+      subject { post "/webhook?channel=", payload, { "CONTENT_TYPE" => "application/json" } }
+
+      it { should be_ok }
+
+      it "called post_slack" do
+        subject
+
+        expect(App).to have_received(:post_slack).
+                         with(webhook_url: webhooK_url, channel: env_channel, username: username, message: message)
+      end
+    end
+
+    context "with channel in params" do
+      subject { post "/webhook?channel=random", payload, { "CONTENT_TYPE" => "application/json" } }
+
+      it { should be_ok }
+
+      it "called post_slack" do
+        subject
+
+        expect(App).to have_received(:post_slack).
+                         with(webhook_url: webhooK_url, channel: "#random", username: username, message: message)
+      end
     end
   end
 end
