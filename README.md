@@ -15,7 +15,14 @@ https://slack.com/apps/A0F7XDUAZ-incoming-webhooks
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ### 3. Register webhook to Docker Hub
-Register webhook url (e.g. `https://MY-APP-NAME.herokuapp.com/webhook`)
+Register webhook url
+
+e.g. 
+
+* `https://MY-APP-NAME.herokuapp.com/webhook`
+  * Without `channel` query, notify to `SLACK_CHANNEL`
+* `https://MY-APP-NAME.herokuapp.com/webhook?channel=other_channel`
+  * With `channel` query, notify to specific channel. (`#` is needless)
 
 ![Docker Hub](img/dockerhub.png)
 
