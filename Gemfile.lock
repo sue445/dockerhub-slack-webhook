@@ -8,7 +8,7 @@ GEM
       tzinfo (~> 1.1)
     ast (2.4.0)
     backports (3.11.4)
-    codeclimate-test-reporter (1.0.8)
+    codeclimate-test-reporter (1.0.9)
       simplecov (<= 0.13)
     concurrent-ruby (1.0.5)
     coveralls (0.8.19)
