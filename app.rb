@@ -55,12 +55,12 @@ class App < Sinatra::Base
     notifier = Slack::Notifier.new(webhook_url)
 
     options = {
-      icon_emoji: ":whale:",
+      icon_emoji:  ":whale:",
       attachments: [
         {
           fallback: message,
-          text: message,
-          color: "good",
+          text:     message,
+          color:    "good",
         },
       ],
     }
