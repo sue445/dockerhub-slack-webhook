@@ -70,6 +70,7 @@ workflows:
           requires:
             - rspec
             - rubocop
-          filters:
-            branches:
-              only: master
+          # TODO deploy test
+          # filters:
+          #   branches:
+          #     only: master
