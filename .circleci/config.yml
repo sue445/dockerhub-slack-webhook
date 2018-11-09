@@ -3,18 +3,20 @@ version: 2.1
 orbs:
   ruby-orbs: sue445/ruby-orbs@volatile
 
-default: &default
-  docker:
-    - image: circleci/ruby:2.5.3
-      environment:
-        RACK_ENV: test
-        CODECLIMATE_REPO_TOKEN: 534299c4cde318f50f1716004b9f46b0ceaf132a68e9bfead3c88faa3981afd4
-    - image: memcached:1.5-alpine
-  working_directory: ~/app
+executors:
+  default:
+    docker:
+      - image: circleci/ruby:2.5.3
+        environment:
+          RACK_ENV: test
+          CODECLIMATE_REPO_TOKEN: 534299c4cde318f50f1716004b9f46b0ceaf132a68e9bfead3c88faa3981afd4
+      - image: memcached:1.5-alpine
+    working_directory: ~/app
 
 jobs:
   rspec:
-    <<: *default
+    executor:
+      name: default
 
     steps:
       - checkout
@@ -23,7 +25,8 @@ jobs:
       - run: bundle exec codeclimate-test-reporter
 
   rubocop:
-    <<: *default
+    executor:
+      name: default
 
     steps:
       - checkout
