@@ -5,10 +5,6 @@
   "website": "https://github.com/sue445/dockerhub-slack-webhook",
   "repository": "https://github.com/sue445/dockerhub-slack-webhook",
   "env": {
-    "BUNDLE_WITHOUT": {
-      "description": "bundle install --without <these>",
-      "value": "test:development"
-    },
     "SLACK_WEBHOOK_URL": {
       "description": "Incoming Webhook URL"
     },
