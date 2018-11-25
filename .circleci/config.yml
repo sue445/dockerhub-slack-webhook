@@ -10,9 +10,28 @@ executors:
       - image: circleci/ruby:2.5.3
         environment:
           RACK_ENV: test
-          CODECLIMATE_REPO_TOKEN: 534299c4cde318f50f1716004b9f46b0ceaf132a68e9bfead3c88faa3981afd4
+          CC_TEST_REPORTER_ID: 534299c4cde318f50f1716004b9f46b0ceaf132a68e9bfead3c88faa3981afd4
       - image: memcached:1.5-alpine
     working_directory: ~/app
+
+commands:
+  with-cc-test-reporter:
+    description: "Run test with cc-test-reporter"
+    parameters:
+      steps:
+        type: steps
+        default: []
+        description: "Run steps between `before-build` and `after-build`"
+    steps:
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            # download test reporter as a static binary
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run: ./cc-test-reporter before-build
+      - steps: << parameters.steps >>
+      - run: ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
 
 jobs:
   rspec:
@@ -22,8 +41,9 @@ jobs:
     steps:
       - checkout
       - ruby-orbs/bundle-install
-      - run: bundle exec rspec
-      - run: bundle exec codeclimate-test-reporter
+      - with-cc-test-reporter:
+          steps:
+            - run: bundle exec rspec
 
   rubocop:
     executor:
