@@ -42,7 +42,8 @@ jobs:
 
     steps:
       - checkout
-      - ruby-orbs/bundle-install
+      - ruby-orbs/bundle-install:
+          cache_key_prefix: "v2-bundle"
       - with-cc-test-reporter:
           steps:
             - run: bundle exec rspec
@@ -53,7 +54,8 @@ jobs:
 
     steps:
       - checkout
-      - ruby-orbs/bundle-install
+      - ruby-orbs/bundle-install:
+          cache_key_prefix: "v2-bundle"
       - run: bundle exec rubocop
 
 workflows:
