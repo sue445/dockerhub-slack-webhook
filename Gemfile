@@ -16,7 +16,7 @@ gem "slack-notifier"
 
 group :development do
   gem "foreman", require: false
-  gem "onkcop", require: false
+  gem "onkcop", require: false, github: "sue445/onkcop", branch: "rubocop_0.68.0"
   gem "rake", require: false
   gem "rubocop-performance", require: false
 end

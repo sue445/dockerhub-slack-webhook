@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/sue445/onkcop
+  revision: 5699b58e39bc4025823258852c51d8a17ec1f6a2
+  branch: rubocop_0.68.0
+  specs:
+    onkcop (0.53.0.3)
+      rubocop (>= 0.53.0)
+      rubocop-rspec (>= 1.24.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -26,9 +35,6 @@ GEM
     minitest (5.11.3)
     multi_json (1.13.1)
     mustermann (1.0.3)
-    onkcop (0.53.0.3)
-      rubocop (>= 0.53.0)
-      rubocop-rspec (>= 1.24.0)
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
@@ -105,7 +111,7 @@ DEPENDENCIES
   activesupport
   coveralls
   foreman
-  onkcop
+  onkcop!
   puma
   puma-heroku
   rack-test
