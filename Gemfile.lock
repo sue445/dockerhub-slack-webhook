@@ -66,6 +66,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.6)
+    rubocop-performance (1.1.0)
+      rubocop (>= 0.67.0)
     rubocop-rspec (1.32.0)
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.0)
@@ -112,10 +114,11 @@ DEPENDENCIES
   rake
   rollbar
   rspec
+  rubocop-performance
   simplecov
   sinatra
   sinatra-contrib
   slack-notifier
 
 BUNDLED WITH
-   1.17.1
+   1.17.2
