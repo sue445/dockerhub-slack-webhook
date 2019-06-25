@@ -19,7 +19,7 @@ group :development do
 
   # TODO: Remove after https://github.com/onk/onkcop/pull/62 is merged
   # gem "onkcop", ">= 0.53.0.3", require: false
-  gem "onkcop", require: false, github: "sue445/onkcop", branch: "rubocop_0.68.0"
+  gem "onkcop", require: false, github: "sue445/onkcop", branch: "rubocop_0.72.0"
 
   gem "rake", require: false
   gem "rubocop-performance", require: false
