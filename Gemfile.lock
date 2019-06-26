@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sue445/onkcop
-  revision: 50137b79625c11f450355985b773b1533a26a959
+  revision: 12f80e6cde6074fa8aa3a36c676aa5d679231d8a
   branch: rubocop_0.72.0
   specs:
     onkcop (0.53.0.3)
