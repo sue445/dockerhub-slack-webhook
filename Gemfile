@@ -17,7 +17,7 @@ gem "slack-notifier"
 group :development do
   gem "foreman", require: false
 
-  # TODO: Remove after https://github.com/onk/onkcop/pull/62 is merged
+  # TODO: Remove after https://github.com/onk/onkcop/pull/62 and https://github.com/onk/onkcop/pull/63 are merged
   # gem "onkcop", ">= 0.53.0.3", require: false
   gem "onkcop", require: false, github: "sue445/onkcop", branch: "rubocop_0.72.0"
 
