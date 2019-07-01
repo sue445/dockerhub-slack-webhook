@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/sue445/puma-heroku
-  revision: 210557f05d032b3d0fff699d6ec78949aa00de14
+  revision: 0a394a8e093ef689615c760ef94b987ba6dc5f07
   branch: puma_v4
   specs:
     puma-heroku (1.0.0)
