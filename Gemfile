@@ -8,11 +8,7 @@ ruby "2.6.4"
 
 gem "activesupport", require: "active_support/all"
 gem "puma"
-
-# TODO: Remove after https://github.com/puma/puma-heroku/pull/8 is merged
-# gem "puma-heroku"
-gem "puma-heroku", github: "sue445/puma-heroku", branch: "puma_v4"
-
+gem "puma-heroku"
 gem "rollbar"
 gem "sinatra"
 gem "sinatra-contrib"
