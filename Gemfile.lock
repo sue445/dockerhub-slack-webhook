@@ -38,7 +38,7 @@ GEM
     mustermann (1.0.3)
     nio4r (2.5.2)
     parallel (1.17.0)
-    parser (2.6.4.1)
+    parser (2.6.5.0)
       ast (~> 2.4.0)
     puma (4.2.0)
       nio4r (~> 2.0)
