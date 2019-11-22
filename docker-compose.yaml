@@ -1,0 +1,18 @@
+version: '2.4'
+
+services:
+
+  docker1.webhook.healthchain.cr:
+    image: soinsalud/dockerhub-slack-webhook:latest
+    container_name: docker1.webhook.healthchain.cr
+    hostname: docker1.webhook.healthchain.cr
+    working_dir: "/app"
+    environment:
+      - SLACK_WEBHOOK_URL=${SLACK_WEBHOOK_URL}
+      - SLACK_CHANNEL=${SLACK_CHANNEL}
+      - SLACK_USERNAME=${SLACK_USERNAME}
+      - DEBUG_LOGGING=${DEBUG_LOGGING}
+      - MAX_THREADS=${MAX_THREADS}
+      - WEB_CONCURRENCY=${WEB_CONCURRENCY}
+    ports:
+      - "${PORT}:3000"
