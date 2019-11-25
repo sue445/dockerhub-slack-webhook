@@ -32,13 +32,7 @@ e.g.
 
 You can also run this app as a Docker container instead of deploying it to Heroku.
 
-### 1. Generate Docker Image
-
-```
-docker build -t dockerhub-slack-webhook .
-```
-
-### 2. Declare environment variables
+### 1. Declare environment variables
 
 ```
 PORT=3000
@@ -50,8 +44,8 @@ MAX_THREADS=5
 WEB_CONCURRENCY=1
 ```
 
-### 3. Run with Docker Compose
+### 2. Run with Docker Compose
 
 ```
-docker compose up -d
+docker-compose up -d
 ```
