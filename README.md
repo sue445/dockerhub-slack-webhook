@@ -27,3 +27,25 @@ e.g.
 ![Docker Hub](img/dockerhub.png)
 
 ### 4. Push image to Docker Hub
+
+## Running as a Docker Container
+
+You can also run this app as a Docker container instead of deploying it to Heroku.
+
+### 1. Declare environment variables
+
+```
+PORT=3000
+SLACK_WEBHOOK_URL=<The Slack Webhook Url>
+SLACK_CHANNEL=#channel
+SLACK_USERNAME="Docker Hub Build"
+DEBUG_LOGGING=false
+MAX_THREADS=5
+WEB_CONCURRENCY=1
+```
+
+### 2. Run with Docker Compose
+
+```
+docker-compose up -d
+```

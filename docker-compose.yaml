@@ -1,0 +1,15 @@
+version: '2.4'
+
+services:
+  app:
+    build: .
+    working_dir: "/app"
+    environment:
+      - SLACK_WEBHOOK_URL
+      - SLACK_CHANNEL
+      - SLACK_USERNAME
+      - DEBUG_LOGGING
+      - MAX_THREADS
+      - WEB_CONCURRENCY
+    ports:
+      - "${PORT}:3000"
