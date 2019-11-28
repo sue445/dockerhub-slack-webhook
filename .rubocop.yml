@@ -13,11 +13,11 @@ AllCops:
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
 
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedColonStyle: table
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
