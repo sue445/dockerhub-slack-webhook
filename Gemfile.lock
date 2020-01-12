@@ -32,7 +32,7 @@ GEM
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.4)
     json (2.3.0)
-    minitest (5.13.0)
+    minitest (5.14.0)
     multi_json (1.14.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
