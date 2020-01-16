@@ -106,7 +106,7 @@ GEM
       sync
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
-    unicode-display_width (1.6.0)
+    unicode-display_width (1.6.1)
     zeitwerk (2.2.2)
 
 PLATFORMS
