@@ -102,7 +102,7 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tins (1.24.0)
+    tins (1.24.1)
       sync
     tzinfo (1.2.6)
       thread_safe (~> 0.1)
