@@ -8,7 +8,6 @@ ruby "2.7.1"
 
 gem "activesupport", require: "active_support/all"
 gem "puma"
-gem "puma-heroku"
 gem "rollbar"
 gem "sinatra"
 gem "sinatra-contrib"
