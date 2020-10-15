@@ -50,7 +50,7 @@ GEM
     rake (13.0.1)
     regexp_parser (1.8.2)
     rexml (3.2.4)
-    rollbar (3.0.0)
+    rollbar (3.0.1)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
