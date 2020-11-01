@@ -11,7 +11,7 @@ class App < Sinatra::Base
 
   configure do
     debug_logging = ENV["DEBUG_LOGGING"] == "true"
-    logger = Logger.new(STDOUT)
+    logger = Logger.new($stdout)
     logger.level = debug_logging ? Logger::DEBUG : Logger::INFO
 
     set :logger, logger
