@@ -38,7 +38,7 @@ class App < Sinatra::Base
       if params[:channel].blank?
         ENV["SLACK_CHANNEL"]
       else
-        "#" + params[:channel]
+        "##{params[:channel]}"
       end
 
     App.post_slack(
