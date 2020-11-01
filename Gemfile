@@ -24,6 +24,7 @@ group :development do
   gem "onkcop", require: false, github: "sue445/onkcop", branch: "develop"
 
   gem "rake", require: false
+  gem "rubocop_auto_corrector", require: false
   gem "rubocop-performance", require: false
 end
 
