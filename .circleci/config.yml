@@ -13,7 +13,6 @@ executors:
         environment:
           RACK_ENV: test
           CC_TEST_REPORTER_ID: 534299c4cde318f50f1716004b9f46b0ceaf132a68e9bfead3c88faa3981afd4
-      - image: memcached:1.5-alpine
     working_directory: ~/app
 
 jobs:
