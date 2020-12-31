@@ -9,8 +9,8 @@ ruby "2.7.2"
 gem "activesupport", require: "active_support/all"
 gem "puma"
 gem "rollbar"
-gem "sinatra"
-gem "sinatra-contrib"
+gem "sinatra", ">= 2.1.0"
+gem "sinatra-contrib", ">= 2.1.0"
 gem "slack-notifier"
 
 group :development do
