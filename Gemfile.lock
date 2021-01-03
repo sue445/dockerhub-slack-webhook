@@ -78,6 +78,8 @@ GEM
     rubocop-performance (1.9.1)
       rubocop (>= 0.90.0, < 2.0)
       rubocop-ast (>= 0.4.0)
+    rubocop-rake (0.5.1)
+      rubocop
     rubocop-rspec (2.1.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
@@ -127,6 +129,7 @@ DEPENDENCIES
   rollbar
   rspec
   rubocop-performance
+  rubocop-rake
   rubocop_auto_corrector
   simplecov
   sinatra (>= 2.1.0)

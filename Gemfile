@@ -19,6 +19,7 @@ group :development do
   gem "rake", require: false
   gem "rubocop_auto_corrector", require: false
   gem "rubocop-performance", require: false
+  gem "rubocop-rake", require: false
 end
 
 group :test do
