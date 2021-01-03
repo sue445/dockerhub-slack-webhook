@@ -5,15 +5,6 @@ GIT
   specs:
     slack-notifier (2.3.2)
 
-GIT
-  remote: https://github.com/sue445/onkcop
-  revision: d09f75a5eeb1969800cca160f653325771590fae
-  branch: develop
-  specs:
-    onkcop (0.53.0.3)
-      rubocop (>= 0.53.0)
-      rubocop-rspec (>= 1.34.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,6 +33,9 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.4)
+    onkcop (1.0.0.0)
+      rubocop (>= 0.80.0)
+      rubocop-rspec (>= 1.34.0)
     parallel (1.20.1)
     parser (3.0.0.0)
       ast (~> 2.4.1)
@@ -126,7 +120,7 @@ DEPENDENCIES
   activesupport
   coveralls
   foreman
-  onkcop!
+  onkcop (>= 1.0.0.0)
   puma
   rack-test
   rake
