@@ -86,7 +86,7 @@ GEM
     rubocop_auto_corrector (0.4.1)
       rubocop (>= 0.87.0)
     ruby-progressbar (1.11.0)
-    ruby2_keywords (0.0.2)
+    ruby2_keywords (0.0.4)
     simplecov (0.16.1)
       docile (~> 1.1)
       json (>= 1.8, < 3)
