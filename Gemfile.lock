@@ -14,7 +14,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
-    ast (2.4.1)
+    ast (2.4.2)
     concurrent-ruby (1.1.8)
     coveralls (0.8.23)
       json (>= 1.8, < 3)
