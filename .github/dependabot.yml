@@ -9,7 +9,3 @@ updates:
   assignees:
   - sue445
   versioning-strategy: lockfile-only
-  ignore:
-  - dependency-name: rubocop
-    versions:
-    - 1.13.0
