@@ -43,9 +43,9 @@ class App < Sinatra::Base
 
     App.post_slack(
       webhook_url: ENV["SLACK_WEBHOOK_URL"],
-      channel:     channel,
+      channel:,
       username:    ENV["SLACK_USERNAME"],
-      message:     message,
+      message:,
     )
 
     ""
