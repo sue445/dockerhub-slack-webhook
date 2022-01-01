@@ -68,7 +68,7 @@ describe App do
         subject
 
         expect(App).to have_received(:post_slack).
-                         with(webhook_url: webhooK_url, channel: env_channel, username: username, message: message)
+                         with(webhook_url: webhooK_url, channel: env_channel, username:, message:)
       end
     end
 
@@ -81,7 +81,7 @@ describe App do
         subject
 
         expect(App).to have_received(:post_slack).
-                         with(webhook_url: webhooK_url, channel: env_channel, username: username, message: message)
+                         with(webhook_url: webhooK_url, channel: env_channel, username:, message:)
       end
     end
 
@@ -94,7 +94,7 @@ describe App do
         subject
 
         expect(App).to have_received(:post_slack).
-                         with(webhook_url: webhooK_url, channel: "#random", username: username, message: message)
+                         with(webhook_url: webhooK_url, channel: "#random", username:, message:)
       end
     end
   end
