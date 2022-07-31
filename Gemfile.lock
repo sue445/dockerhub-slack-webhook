@@ -125,7 +125,6 @@ DEPENDENCIES
   rubocop-rake
   rubocop_auto_corrector
   simplecov
-  sinatra (>= 2.2.0)
   sinatra-contrib (>= 2.2.0)
   slack-notifier (>= 2.4.0)
 
