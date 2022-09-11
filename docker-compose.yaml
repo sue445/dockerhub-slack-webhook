@@ -1,4 +1,4 @@
-version: '2.4'
+version: '3'
 
 services:
   app:
@@ -8,8 +8,10 @@ services:
       - SLACK_WEBHOOK_URL
       - SLACK_CHANNEL
       - SLACK_USERNAME
-      - DEBUG_LOGGING
-      - MAX_THREADS
-      - WEB_CONCURRENCY
+      # - DEBUG_LOGGING=false
+      # - PUMA_THREADS_MIN=0
+      # - PUMA_THREADS_MAX=1
+      # - PUMA_WORKERS=0
+      # - PUMA_PORT=3000
     ports:
-      - "${PORT}:3000"
+      - "3000:3000"

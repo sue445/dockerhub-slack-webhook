@@ -1,13 +1,18 @@
-FROM ruby:3.1.2
+FROM ruby:3.1
 
-# Create app directory
+ENV RACK_ENV=production
+
 WORKDIR /app
 
-# Bundle app source
-COPY . .
+COPY Gemfile Gemfile.lock /app/
 
-RUN bundle install
+RUN bundle config set --local jobs 2 && \
+    bundle config set --local deployment 'true' && \
+    bundle config set --local without 'development test' && \
+    bundle install
+
+COPY . .
 
 EXPOSE 3000
 
-CMD ["bundle","exec","puma","-p","3000"]
+CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
