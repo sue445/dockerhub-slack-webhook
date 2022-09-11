@@ -8,6 +8,7 @@ services:
       - SLACK_WEBHOOK_URL
       - SLACK_CHANNEL
       - SLACK_USERNAME
+      - SENTRY_DSN
       # - DEBUG_LOGGING=false
       # - PUMA_THREADS_MIN=0
       # - PUMA_THREADS_MAX=1
