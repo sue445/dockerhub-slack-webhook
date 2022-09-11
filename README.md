@@ -23,7 +23,7 @@ This application is provided as a Docker image, so you can run it wherever you l
 * [Google Artifact Registry](https://console.cloud.google.com/artifacts/docker/dockerhub-slack-webhook/us/dockerhub-slack-webhook/app): If you want to run this app on [Cloud Run](https://cloud.google.com/run), use this image
   * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:latest`: Use latest version
   * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:X.Y.Z`: Use specified version
-  * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:main`: The contents of the main branch are pushed to this tag
+  * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:edge`: The contents of the main branch are pushed to this tag
 
 #### Available environment variables
 * `SLACK_WEBHOOK_URL` **(Required)** : Incoming Webhook URL
