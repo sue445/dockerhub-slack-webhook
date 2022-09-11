@@ -41,6 +41,8 @@ jobs:
         with:
           images: |
             us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app
+          tags: |
+            type=sha
 
       - id: auth
         name: Authenticate to Google Cloud
