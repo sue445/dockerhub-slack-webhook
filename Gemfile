@@ -8,12 +8,10 @@ ruby "3.1.2"
 
 gem "activesupport", require: "active_support/all"
 gem "puma"
-gem "rollbar"
 gem "sinatra-contrib", ">= 2.2.0"
 gem "slack-notifier", ">= 2.4.0"
 
 group :development do
-  gem "foreman", require: false
   gem "onkcop", ">= 1.0.0.0", require: false
   gem "rake", require: false
   gem "rubocop_auto_corrector", require: false
