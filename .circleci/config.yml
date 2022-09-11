@@ -3,7 +3,6 @@ version: 2.1
 orbs:
   codeclimate: sue445/codeclimate@volatile
   ruby-orbs: sue445/ruby-orbs@volatile
-  heroku:    circleci/heroku@volatile
   slack:     circleci/slack@3
 
 executors:
@@ -44,17 +43,7 @@ jobs:
 workflows:
   version: 2
 
-  build-and-deploy:
+  build:
     jobs:
       - rspec
       - rubocop
-      - heroku/deploy-via-git:
-          context: Heroku
-          requires:
-            - rspec
-            - rubocop
-          filters:
-            branches:
-              only: master
-          post-deploy:
-            - slack/status
