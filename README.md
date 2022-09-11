@@ -32,6 +32,7 @@ This application is provided as a Docker image, so you can run it wherever you l
 * `PUMA_WORKERS` : Puma workers count. default is `1`
 * `PUMA_PORT` : Puma port. default is `8080`
 * `DEBUG_LOGGING` : If `true` is set, debug logs are output
+* `SENTRY_DSN` : [Sentry](https://sentry.io) DSN. This variable is optional. If you want to use Sentry, please set DSN
 
 ### 3. Register webhook to Docker Hub
 Register webhook url
