@@ -1,6 +1,6 @@
 environment(ENV.fetch("RACK_ENV", "production"))
 
-port(ENV.fetch("PUMA_PORT", 3000).to_i, "0.0.0.0")
+port(ENV.fetch("PUMA_PORT", 8080).to_i, "0.0.0.0")
 
 puma_workers = ENV.fetch("PUMA_WORKERS", 1).to_i
 workers(puma_workers)
