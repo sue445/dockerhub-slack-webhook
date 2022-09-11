@@ -103,6 +103,9 @@ jobs:
           workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ env.SERVICE_ACCOUNT_EMAIL }}
 
+      - name: Replace __GITHUB_SHA__ in .github/cloud_run-service.yml
+        run: sed -i "s/__GITHUB_SHA__/${GITHUB_SHA}/g" .github/cloud_run-service.yml
+
       - id: deploy
         uses: google-github-actions/deploy-cloudrun@v0
         with:
