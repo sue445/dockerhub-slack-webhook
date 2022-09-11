@@ -4,8 +4,6 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-ruby "3.1.2"
-
 gem "activesupport", require: "active_support/all"
 gem "puma"
 gem "sinatra-contrib", ">= 2.2.0"
