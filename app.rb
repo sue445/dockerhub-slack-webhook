@@ -1,12 +1,9 @@
 ENV["RACK_ENV"] ||= "development"
 Bundler.require(:default, ENV["RACK_ENV"])
 
-require "rollbar/middleware/sinatra"
 require "sinatra/custom_logger"
 
 class App < Sinatra::Base
-  use Rollbar::Middleware::Sinatra
-
   helpers Sinatra::CustomLogger
 
   configure do

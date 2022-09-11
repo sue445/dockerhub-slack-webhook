@@ -4,6 +4,8 @@
 ![Slack](img/slack.png)
 
 [![CircleCI](https://circleci.com/gh/sue445/dockerhub-slack-webhook.svg?style=svg)](https://circleci.com/gh/sue445/dockerhub-slack-webhook)
+[![docker-gcp](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-gcp.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-gcp.yml)
+[![docker-ghcr](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-ghcr.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-ghcr.yml)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/dockerhub-slack-webhook/badge.svg?branch=master)](https://coveralls.io/github/sue445/dockerhub-slack-webhook?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/a013ff2962f7a49b77f3/maintainability)](https://codeclimate.com/github/sue445/dockerhub-slack-webhook/maintainability)
 
@@ -11,41 +13,43 @@
 ### 1. Create Incoming WebHook URL
 https://slack.com/apps/A0F7XDUAZ-incoming-webhooks
 
-### 2. Create heroku app from following "Deploy to Heroku" button
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+### 2. Deploy Docker image to your environment
+This application is provided as a Docker image, so you can run it wherever you like.
+
+#### Images
+* [GitHub Container Registry](https://github.com/sue445/dockerhub-slack-webhook/pkgs/container/dockerhub-slack-webhook) **(Recommended)**
+  * `ghcr.io/sue445/dockerhub-slack-webhook:latest`: Use latest version
+  * `ghcr.io/sue445/dockerhub-slack-webhook:X.Y.Z`: Use specified version
+* [Google Artifact Registry](https://console.cloud.google.com/artifacts/docker/dockerhub-slack-webhook/us/dockerhub-slack-webhook/app): If you want to run this app on [Cloud Run](https://cloud.google.com/run), use this image
+  * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:latest`: Use latest version
+  * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:X.Y.Z`: Use specified version
+  * `us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:main`: The contents of the main branch are pushed to this tag
+
+#### Available environment variables
+* `SLACK_WEBHOOK_URL` **(Required)** : Incoming Webhook URL
+* `PUMA_THREADS_MIN` : Puma minimum threads count. default is `0`
+* `PUMA_THREADS_MAX` : Puma minimum threads count. default is `5`
+* `PUMA_WORKERS` : Puma workers count. default is `1`
+* `PUMA_PORT` : Puma port. default is `8080`
+* `DEBUG_LOGGING` : If `true` is set, debug logs are output
 
 ### 3. Register webhook to Docker Hub
 Register webhook url
 
 e.g. 
 
-* `https://MY-APP-NAME.herokuapp.com/webhook`
+* `https://example.com/webhook`
   * Without `channel` query, notify to `SLACK_CHANNEL`
-* `https://MY-APP-NAME.herokuapp.com/webhook?channel=other_channel`
+* `https://example.com/webhook?channel=other_channel`
   * With `channel` query, notify to specific channel. (`#` is needless)
 
 ![Docker Hub](img/dockerhub.png)
 
 ### 4. Push image to Docker Hub
 
-## Running as a Docker Container
+## Heroku
+This application was offered as a Heroku application, but [since Heroku is ending its free plan](https://blog.heroku.com/next-chapter), I have made it possible to run it outside of Heroku.
 
-You can also run this app as a Docker container instead of deploying it to Heroku.
+So this app can run outside of Heroku.
 
-### 1. Declare environment variables
-
-```
-PORT=8080
-SLACK_WEBHOOK_URL=<The Slack Webhook Url>
-SLACK_CHANNEL=#channel
-SLACK_USERNAME="Docker Hub Build"
-DEBUG_LOGGING=false
-MAX_THREADS=5
-WEB_CONCURRENCY=1
-```
-
-### 2. Run with Docker Compose
-
-```
-docker-compose up -d
-```
+If you want to run this app on Heroku, browse [heroku branch](https://github.com/sue445/dockerhub-slack-webhook/tree/heroku) and click "Deploy to Heroku" button.
