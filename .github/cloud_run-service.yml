@@ -15,7 +15,7 @@ spec:
       timeoutSeconds: 5
       serviceAccountName: webhook-app@dockerhub-slack-webhook.iam.gserviceaccount.com
       containers:
-        - image: us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:__GITHUB_SHA__
+        - image: us-docker.pkg.dev/dockerhub-slack-webhook/dockerhub-slack-webhook/app:sha-__GITHUB_SHA__
           ports:
             - name: http1
               containerPort: 8080
