@@ -35,7 +35,7 @@ You can also run this app as a Docker container instead of deploying it to Herok
 ### 1. Declare environment variables
 
 ```
-PORT=3000
+PORT=8080
 SLACK_WEBHOOK_URL=<The Slack Webhook Url>
 SLACK_CHANNEL=#channel
 SLACK_USERNAME="Docker Hub Build"

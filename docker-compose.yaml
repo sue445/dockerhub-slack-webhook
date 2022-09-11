@@ -12,6 +12,6 @@ services:
       # - PUMA_THREADS_MIN=0
       # - PUMA_THREADS_MAX=1
       # - PUMA_WORKERS=0
-      # - PUMA_PORT=3000
+      # - PUMA_PORT=8080
     ports:
-      - "3000:3000"
+      - "8080:8080"

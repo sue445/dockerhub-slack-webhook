@@ -13,6 +13,6 @@ RUN bundle config set --local jobs 2 && \
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 8080
 
 CMD ["bundle", "exec", "puma", "-C", "config/puma.rb"]
