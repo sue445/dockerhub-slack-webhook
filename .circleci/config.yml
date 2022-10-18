@@ -1,7 +1,6 @@
 version: 2.1
 
 orbs:
-  codeclimate: sue445/codeclimate@volatile
   ruby-orbs: sue445/ruby-orbs@volatile
   slack:     circleci/slack@3
 
@@ -23,10 +22,7 @@ jobs:
       - checkout
       - ruby-orbs/bundle-install:
           cache_key_prefix: "v2-bundle"
-      - codeclimate/with-cc-test-reporter:
-          after_build_args: '--coverage-input-type simplecov'
-          steps:
-            - run: bundle exec rspec
+      - run: bundle exec rspec
       - slack/notify-on-failure
 
   rubocop:
