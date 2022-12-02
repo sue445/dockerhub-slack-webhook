@@ -21,7 +21,7 @@ jobs:
     steps:
       - checkout
       - ruby-orbs/bundle-install:
-          cache_key_prefix: "v2-bundle"
+          cache_key_prefix: "v3-bundle"
       - run: bundle exec rspec
       - slack/notify-on-failure
 
@@ -32,7 +32,7 @@ jobs:
     steps:
       - checkout
       - ruby-orbs/bundle-install:
-          cache_key_prefix: "v2-bundle"
+          cache_key_prefix: "v3-bundle"
       - run: bundle exec rubocop
       - slack/notify-on-failure
 
