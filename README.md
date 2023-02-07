@@ -4,7 +4,6 @@
 ![Slack](img/slack.png)
 
 [![test](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/test.yml)
-[![CircleCI](https://circleci.com/gh/sue445/dockerhub-slack-webhook.svg?style=svg)](https://circleci.com/gh/sue445/dockerhub-slack-webhook)
 [![docker-gcp](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-gcp.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-gcp.yml)
 [![docker-ghcr](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-ghcr.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-ghcr.yml)
 [![Coverage Status](https://coveralls.io/repos/github/sue445/dockerhub-slack-webhook/badge.svg?branch=master)](https://coveralls.io/github/sue445/dockerhub-slack-webhook?branch=master)
