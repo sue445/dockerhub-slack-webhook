@@ -1,13 +1,13 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.2)
+    activesupport (7.0.4.3)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     ast (2.4.2)
-    concurrent-ruby (1.2.0)
+    concurrent-ruby (1.2.2)
     coveralls_reborn (0.25.0)
       simplecov (>= 0.18.1, < 0.22.0)
       term-ansicolor (~> 1.6)
@@ -18,7 +18,7 @@ GEM
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
-    minitest (5.17.0)
+    minitest (5.18.0)
     multi_json (1.15.0)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
@@ -104,7 +104,7 @@ GEM
     tilt (2.0.11)
     tins (1.31.1)
       sync
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
 
