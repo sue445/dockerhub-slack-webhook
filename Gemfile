@@ -9,6 +9,7 @@ gem "puma"
 gem "sentry-ruby"
 gem "sinatra-contrib", ">= 2.2.0"
 gem "slack-notifier", ">= 2.4.0"
+gem "uri", ">= 0.12.2" # for CVE-2023-36617
 
 group :development do
   gem "onkcop", ">= 1.0.0.0", require: false

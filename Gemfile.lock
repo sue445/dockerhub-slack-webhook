@@ -107,6 +107,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
+    uri (0.12.2)
 
 PLATFORMS
   ruby
@@ -126,6 +127,7 @@ DEPENDENCIES
   simplecov
   sinatra-contrib (>= 2.2.0)
   slack-notifier (>= 2.4.0)
+  uri (>= 0.12.2)
 
 BUNDLED WITH
    2.3.7
