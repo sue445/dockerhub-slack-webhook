@@ -8,7 +8,7 @@ GEM
       tzinfo (~> 2.0)
     ast (2.4.2)
     concurrent-ruby (1.2.2)
-    coveralls_reborn (0.27.0)
+    coveralls_reborn (0.28.0)
       simplecov (~> 0.22.0)
       term-ansicolor (~> 1.7)
       thor (~> 1.2)
@@ -100,7 +100,7 @@ GEM
     sync (0.5.0)
     term-ansicolor (1.7.1)
       tins (~> 1.0)
-    thor (1.2.1)
+    thor (1.2.2)
     tilt (2.1.0)
     tins (1.32.1)
       sync
