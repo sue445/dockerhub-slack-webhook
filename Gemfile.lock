@@ -34,7 +34,7 @@ GEM
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     mutex_m (0.2.0)
-    nio4r (2.5.9)
+    nio4r (2.7.0)
     onkcop (1.0.0.0)
       rubocop (>= 0.80.0)
       rubocop-rspec (>= 1.34.0)
@@ -42,7 +42,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
-    puma (6.4.0)
+    puma (6.4.1)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (2.2.8)
