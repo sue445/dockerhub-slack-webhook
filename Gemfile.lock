@@ -91,7 +91,7 @@ GEM
     rubocop-rspec (2.3.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
-    rubocop_auto_corrector (0.4.5)
+    rubocop_auto_corrector (0.5.0)
       rubocop (>= 1.30.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
