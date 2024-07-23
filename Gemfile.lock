@@ -95,7 +95,7 @@ GEM
       rubocop (>= 1.30.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    sentry-ruby (5.18.1)
+    sentry-ruby (5.18.2)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
     simplecov (0.22.0)
