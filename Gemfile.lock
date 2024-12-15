@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (8.0.0.1)
+    activesupport (8.0.1)
       base64
       benchmark (>= 0.3)
       bigdecimal
@@ -32,7 +32,7 @@ GEM
       concurrent-ruby (~> 1.0)
     json (2.8.2)
     language_server-protocol (3.17.0.3)
-    logger (1.6.2)
+    logger (1.6.3)
     minitest (5.25.4)
     multi_json (1.15.0)
     mustermann (3.0.3)
