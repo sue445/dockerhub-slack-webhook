@@ -1,5 +1,11 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.2...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.3...main)
+
+# 1.0.3
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.2...1.0.3)
+
+* [CVE-2025-27610] Bump rack from 3.1.11 to 3.1.12
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/730
 
 # 1.0.2
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.1...1.0.2)
