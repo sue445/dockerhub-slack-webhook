@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-performance
   - rubocop-rake
 
@@ -16,6 +16,7 @@ AllCops:
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
   NewCops: enable
+  SuggestExtensions: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: table
