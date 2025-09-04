@@ -48,6 +48,15 @@ e.g.
 
 ### 4. Push image to Docker Hub
 
+## Development
+Run at local
+
+```bash
+docker compose up --build
+```
+
+See http://localhost:8080
+
 ## Heroku
 This application was offered as a Heroku application, but [since Heroku is ending its free plan](https://blog.heroku.com/next-chapter), I have made it possible to run it outside of Heroku.
 
