@@ -1,5 +1,12 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.5...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.6...main)
+
+# [1.0.6](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.6)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.5...1.0.6)
+
+* Migrate Docker image to slim
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/753
+* Update dependencies
 
 # [1.0.5](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.5)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.4...1.0.5)
