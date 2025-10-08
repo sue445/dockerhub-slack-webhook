@@ -1,5 +1,12 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.6...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.7...main)
+
+# [1.0.7](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.7)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.6...1.0.7)
+
+* [CVE-2025-61770][CVE-2025-61771][CVE-2025-61772] Bump rack from 3.1.16 to 3.1.17
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/764
+* Update dependencies
 
 # [1.0.6](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.6)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.5...1.0.6)
