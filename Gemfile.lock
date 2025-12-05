@@ -163,4 +163,4 @@ DEPENDENCIES
   uri (>= 0.12.2)
 
 BUNDLED WITH
-   2.3.7
+   4.0.0
