@@ -153,6 +153,7 @@ DEPENDENCIES
   rack-test
   rake
   rspec
+  rubocop
   rubocop-performance
   rubocop-rake
   rubocop_auto_corrector
