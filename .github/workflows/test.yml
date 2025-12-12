@@ -18,9 +18,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-      - uses: ruby/setup-ruby@v1
+      - uses: ruby/setup-ruby@d697be2f83c6234b20877c3b5eac7a7f342f0d0c # v1.269.0
         with:
           ruby-version: "3.4"
           bundler-cache: true
@@ -32,7 +32,7 @@ jobs:
       - run: bundle exec rubocop
 
       - name: Slack Notification
-        uses: act10ns/slack@v2
+        uses: act10ns/slack@cfcc30955fe9377f4f55e1079e5419ee1014269f # v2
         if: always()
         continue-on-error: true
         with:
