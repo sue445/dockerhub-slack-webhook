@@ -1,5 +1,12 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.8...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.9...main)
+
+# [1.0.9](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.9)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.8...1.0.9)
+
+* Upgrade to Ruby 4.0 :gem:
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/797
+* Update dependencies
 
 # [1.0.8](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.8)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.7...1.0.8)
