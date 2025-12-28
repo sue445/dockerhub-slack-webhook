@@ -1,5 +1,11 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.9...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.10...main)
+
+# [1.0.10](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.10)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.9...1.0.10)
+
+* Diet docker image size
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/799
 
 # [1.0.9](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.9)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.8...1.0.9)
