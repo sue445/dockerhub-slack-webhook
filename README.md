@@ -6,8 +6,8 @@
 [![test](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/test.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/test.yml)
 [![docker-gcp](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-gcp.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-gcp.yml)
 [![docker-ghcr](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-ghcr.yml/badge.svg)](https://github.com/sue445/dockerhub-slack-webhook/actions/workflows/docker-ghcr.yml)
-[![Coverage Status](https://coveralls.io/repos/github/sue445/dockerhub-slack-webhook/badge.svg?branch=master)](https://coveralls.io/github/sue445/dockerhub-slack-webhook?branch=master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a013ff2962f7a49b77f3/maintainability)](https://codeclimate.com/github/sue445/dockerhub-slack-webhook/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/sue445/dockerhub-slack-webhook/badge.svg)](https://coveralls.io/github/sue445/dockerhub-slack-webhook)
+[![Maintainability](https://qlty.sh/gh/sue445/projects/dockerhub-slack-webhook/maintainability.svg)](https://qlty.sh/gh/sue445/projects/dockerhub-slack-webhook)
 
 ## Usage
 ### 1. Create Incoming WebHook URL
