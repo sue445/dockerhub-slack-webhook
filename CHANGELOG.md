@@ -1,5 +1,12 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.11...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.12...main)
+
+# [1.0.12](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.12)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.11...1.0.12)
+
+* [CVE-2026-33210] Bump json from 2.19.1 to 2.19.2
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/825
+* Update dependencies
 
 # [1.0.11](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.11)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.10...1.0.11)
