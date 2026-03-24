@@ -1,5 +1,12 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.12...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.13...main)
+
+# [1.0.13](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.13)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.12...1.0.13)
+
+* [CVE-2026-33169] Bump activesupport from 8.1.2 to 8.1.2.1
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/827
+* Update dependencies
 
 # [1.0.12](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.12)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.11...1.0.12)
