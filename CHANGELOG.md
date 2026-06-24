@@ -1,5 +1,12 @@
 # Unreleased
-[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.15...main)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.16...main)
+
+# [1.0.16](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.16)
+[full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.15...1.0.16)
+
+* [CVE-2026-54904] Bump concurrent-ruby from 1.3.6 to 1.3.7
+  * https://github.com/sue445/dockerhub-slack-webhook/pull/860
+* Update dependencies
 
 # [1.0.15](https://github.com/sue445/dockerhub-slack-webhook/releases/tag/1.0.15)
 [full changelog](http://github.com/sue445/dockerhub-slack-webhook/compare/1.0.14...1.0.15)
